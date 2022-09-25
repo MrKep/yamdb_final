@@ -47,7 +47,7 @@ jobs:
           uses: docker/build-push-action@v2 
           with:
             push: true
-            tags: makap59/infra_action
+            tags: makap59/api_yamdb
 
   # Деплой на сервер  
   deploy:
