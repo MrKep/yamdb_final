@@ -1,3 +1,5 @@
+from api.permissions import AdminPermission
+from api.serializers import RegisterSerializer, TokenSerializer, UserSerializer
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
@@ -7,11 +9,8 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
 from users.models import User
 
-from api.permissions import AdminPermission
-from api.serializers import RegisterSerializer, TokenSerializer, UserSerializer
 from api_yamdb.settings import ADMIN_EMAIL
 
 
